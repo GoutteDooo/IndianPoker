@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Poker Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Indian Poker Game ❤️</h1>
+    </header>
+    <main>
+        <div class="tablePoker">
+            <div id="dealerCards"></div>
+            <div id="chipsBlinds"></div>
+            <div id="chipsRaise"></div>
+            <div id ="playerCards"><br></div>
+            <button class="bouton" id="toggleSoundBtn">S : ON</button> <!-- Bouton pour activer/désactiver les sons -->
+            <div id="bonusInfo">
+                <h3>Bonus</h3>
+                <ul id="bonusList">
+                    AAs : 50x la blinde
+                    <br>KKs : 20x la blinde
+                    <br>QQs : 15x la blinde
+                    <br>JJs : 10x la blinde
+                    <br>TTs : 10x la blinde
+                    <br>99s-22s : 9x-2x la blinde
+                    <br>paire : 1x la blinde
+                </ul>
+            </div>
+        </div>
+        <div class="barreJeu">
+            <div class="bankroll">
+                <u>Bankroll :</u> 
+                <div id="valueBr">1000</div>
+            </div>
+            <div class="gameText">
+                <span style="font-size: 2rem;"><b><u>Informations : </u></b></span>
+                <br> <div id="infosGame"></div>
+            </div>
+            <div class="grilleActions">
+                <button class="bouton" id="checkBtn">Check</button>
+                <button class="bouton" id="raiseBtn">Raise</button>
+                <button class="hidden" id="replayBtn">Rejouer</button>
+            </div>
+        </div>
+    </main>
+
+    <audio id="checkAudio" src="./assets/snd/check.wav" preload="auto"></audio>
+    <audio id="tieAudio" src="./assets/snd/tie.wav" preload="auto"></audio>
+    <audio id="restartAudio" src="./assets/snd/restart3.wav" preload="auto"></audio>
+    <audio id="raiseAudio" src="./assets/snd/raise.wav" preload="auto"></audio>
+    <audio id="loseAudio" src="./assets/snd/lose.wav" preload="auto"></audio>
+    <audio id="winAudio" src="./assets/snd/win.wav" preload="auto"></audio>
+    <audio id="winBonusAudio" src="./assets/snd/winBonus.wav" preload="auto"></audio>
+    <script src="./index.js"></script>
+</body>
+</html>

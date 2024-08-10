@@ -1,0 +1,162 @@
+@font-face {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    src: url(./assets/fonts/PlaywriteCO-Regular.ttf);
+  }
+
+  
+body {
+    background-color: hsla(221, 86%, 14%, 0.808);
+    font-family:'Times New Roman', Times, serif;
+    background: url(./assets/img/bg.jpg) no-repeat center/cover;
+    /* VH = 100% de la taille de l'ecran (viewport height) */
+    min-height: 100vh;
+  }
+  
+h1 {
+    text-align: center;
+    color: rgb(231, 58, 231);
+    font-size: 2rem;
+    text-shadow: 0px 1px 11px;
+    background: rgba(80, 75, 4, 0.582);
+    border-radius: 10px;
+    margin-left : 20vh;
+    margin-right: 20vh;
+    box-shadow: 0 0 9px 8px #f906ee;
+}
+
+main {
+    min-height: 500px;
+    width: 90%; /* A utiliser les % sur les largeurs pour tout les types d'écrans, mais pas forcément la weight car ça peut être le bordel !  */
+    /* Center une boîte  */
+    margin : 0 auto; /* 1ere valeur : haut bas, 2eme : gauche droite*/
+    border: 2px solid rgba(255, 0, 242, 0.514);
+    border-radius: 20px 20px 20px 20px; /*ou 20px tout court */
+    box-shadow: 1px 1px 10px 4px #ff00f7ab;
+    padding: 15px;
+  }
+
+  .tablePoker {
+    display: flex;
+    border: 40px solid rgb(27, 26, 26);
+    border-radius: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 600px;
+    width: 1200px;
+    background: rgb(17, 85, 8);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Pour fixer les dimensions des images */
+
+
+.card-image {
+    width: 115px; /* Change la largeur selon tes besoins */
+    height: 160px; /* Change la hauteur selon tes besoins */
+    object-fit: cover; /* Pour que l'image s'adapte bien aux dimensions définies */
+}
+
+.chip-image {
+    position: relative;
+    width: 40px; /* Change la largeur selon tes besoins */
+    height: 40px; /* Change la hauteur selon tes besoins */
+    object-fit: cover; /* Pour que l'image s'adapte bien aux dimensions définies */
+}
+
+.chip-image.offset {
+    top: 0px; /* Décale de 10 pixels vers le haut */
+}
+  
+.barreJeu {
+    display: flex;
+    background: rgba(255, 255, 255, 0.603);
+    min-height: 100px;
+    font-size: 2.5rem;
+    justify-content: space-around;
+}
+
+
+.bankroll {
+    display: flex;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    align-items: center;
+    margin: 50px;
+} 
+
+#valueBr {
+    margin-left: 20px;
+    font-size: 3rem;
+}
+
+#bonusInfo {
+    position: absolute;
+    top: 350px;
+    left: 350px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px; /* Ajustez selon vos besoins */
+    height: 220px; /* Ajustez selon vos besoins */
+    overflow-y: auto; /* Permettre le défilement si le contenu dépasse la taille */
+    z-index: 50;
+}
+.gameText {
+    font-size: 1.5rem;
+    margin-left: 0%;
+    margin-right: 20%;
+}
+
+.bouton{
+    height: 70px;
+    margin : 20px;
+    display: block;
+    background: yellow;
+    border-radius: 20px;
+    border: 4px double #976b0d;
+    color: #000000;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.bouton:hover{
+    background: rgb(146, 112, 19);
+    border: 2px solid #a58313;
+    box-shadow: 10px 5px 5px #719fee;
+    color: #000000;
+    text-align: center;
+}
+
+#toggleSoundBtn {
+    position: absolute;
+    top: 100px; /* Ajustez cette valeur pour la position verticale */
+    right: 100px; /* Ajustez cette valeur pour la position horizontale */
+    background-color: gold; /* Couleur de fond du bouton */
+    color: black; /* Couleur du texte du bouton */
+    padding: 10px; /* Espacement interne du bouton */
+    border: none; /* Enlever la bordure du bouton */
+    cursor: pointer; /* Curseur en forme de pointeur pour le bouton */
+    z-index: 10; /* S'assurer que le bouton est au-dessus d'autres éléments */
+}
+
+.grilleActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "i1 i2";
+    margin: auto;
+  }
+
+
+.hidden {
+      display: none;
+  }
